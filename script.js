@@ -27,3 +27,30 @@ $(function () {
   }
 });
 
+$(".searchbtn").click(function () {
+  whichcity = document.querySelector(".cityinput").value.trim();
+  whichcity = whichcity[0].toUpperCase() + whichcity.slice(1);
+
+  if (document.querySelector(".cityinput").value.trim() == "") {
+    alert("Please enter a valid City");
+  } else {
+    fetch1();
+    if (cityhistory.includes(whichcity)) {
+    } else {
+      var $addbtn = $(
+        '<button type="submit" class="searchhistoryparts btn" id="city-' +
+          whichcity +
+          '" />'
+      );
+
+      $addbtn
+        .html(whichcity)
+        .click(function () {
+          whichcity = $(this).html();
+          fetch3();
+        })
+        .appendTo($(".searchhistory"));
+    }
+  }
+});
+
