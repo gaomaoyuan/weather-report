@@ -5,7 +5,9 @@
   /*setting for nav bar, banner*/
   nav {
     background-color: #163286;
-    color: aliceblue;
+  }
+  h1 {
+    color:white;
   }
   /*settings for main section*/
   main {
@@ -90,7 +92,7 @@
     display: none;
   }
   .partsfivedays {
-    background-color: rgba(8, 3, 3, 0.658);
+    background-color:#0a58ca;
     display: inline-block;
     color: aliceblue;
     font-weight: bold;
